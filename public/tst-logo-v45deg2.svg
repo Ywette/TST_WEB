@@ -1,0 +1,87 @@
+<svg viewBox="50 50 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blueGlow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood floodColor="#2563eb" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="pinkGlow">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feFlood floodColor="#ec4899" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <mask id="fadeMask">
+      <rect x="50" y="50" width="100" height="100" fill="white" />
+      <rect x="50" y="50" width="100" height="100">
+        <animate attributeName="y" values="150;50" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </mask>
+
+    <mask id="fadeMaskFast">
+      <rect x="50" y="50" width="100" height="100" fill="white" />
+      <rect x="50" y="50" width="100" height="100">
+        <animate attributeName="y" values="150;50" dur="2s" repeatCount="indefinite" />
+      </rect>
+    </mask>
+  </defs>
+
+  {/* Rotating Group */}
+  <g transform="rotate(45 100 100)">
+    {/* Ground Network with Dish */}
+    <circle cx="100" cy="100" r="4" fill="#1a365d" />
+    <path d="M100 100 L140 100" stroke="#1a365d" stroke-width="2" />
+    <path d="M60 100 C 100 130, 140 100, 140 100" fill="#1a365d" stroke="#1a365d" stroke-width="2" />
+    <circle cx="60" cy="100" r="3" fill="#1a365d" />
+    <circle cx="140" cy="100" r="3" fill="#1a365d" />
+
+    {/* Blue waves with cone shape */}
+    <g mask="url(#fadeMask)">
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 120 70, 100 60 Q 140 50, 100 40" 
+        fill="none" 
+        stroke="#2563eb" 
+        stroke-width="1.5"
+        filter="url(#blueGlow)">
+        <animate attributeName="y" values="0;-60" dur="3s" repeatCount="indefinite" />
+      </path>
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 80 70, 100 60 Q 60 50, 100 40" 
+        fill="none" 
+        stroke="#2563eb" 
+        stroke-width="1.5"
+        filter="url(#blueGlow)">
+        <animate attributeName="y" values="0;-60" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </path>
+    </g>
+
+    {/* Pink waves with cone shape */}
+    <g mask="url(#fadeMaskFast)">
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 110 70, 100 60 Q 120 50, 100 40" 
+        fill="none" 
+        stroke="#ec4899" 
+        stroke-width="1"
+        filter="url(#pinkGlow)">
+        <animate attributeName="y" values="0;-60" dur="2s" repeatCount="indefinite" begin="0.3s" />
+      </path>
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 90 70, 100 60 Q 80 50, 100 40" 
+        fill="none" 
+        stroke="#ec4899" 
+        stroke-width="1"
+        filter="url(#pinkGlow)">
+        <animate attributeName="y" values="0;-60" dur="2s" repeatCount="indefinite" begin="0.8s" />
+      </path>
+    </g>
+  </g>
+</svg>

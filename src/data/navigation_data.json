@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "navItem": "home"      
+    },
+    {
+      "id": 2,
+      "navItem": "about"      
+    },
+    {
+      "id": 3,
+      "navItem": "services"      
+    },
+    {
+      "id": 4,
+      "navItem": "connect"      
+    }
+    
+]

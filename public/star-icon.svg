@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="50" cy="50" r="45" fill="rgba(0, 0, 0, 0.15)" opacity="0.5" />
+  
+  <!-- Five-pointed star -->
+  <path d="M50,10 L61,40 L94,40 L68,60 L79,90 L50,73 L21,90 L32,60 L6,40 L39,40 Z" fill="none" stroke="lime" stroke-width="1" />
+  
+  <!-- Additional small circles at points -->
+  <circle cx="50" cy="10" r="2" fill="lime" opacity="0.7" />
+  <circle cx="94" cy="40" r="2" fill="lime" opacity="0.7" />
+  <circle cx="79" cy="90" r="2" fill="lime" opacity="0.7" />
+  <circle cx="21" cy="90" r="2" fill="lime" opacity="0.7" />
+  <circle cx="6" cy="40" r="2" fill="lime" opacity="0.7" />
+  
+  <!-- Glass effect overlay -->
+  <ellipse cx="40" cy="40" rx="30" ry="25" fill="rgba(255, 255, 255, 0.05)" opacity="0.2" transform="rotate(-10 50 50)" />
+</svg>

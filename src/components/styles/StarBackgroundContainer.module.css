@@ -1,0 +1,82 @@
+.aurora {
+  position: absolute;
+  width: 22vw;
+  height: 7vw;
+  left: 60vw;
+  top: 10vh;
+  background: linear-gradient(120deg, #7fffd4 0%, #5af3ff 60%, #ffe066 100%);
+  opacity: 0.32;
+  filter: blur(60px);
+  border-radius: 50% 50% 60% 40% / 60% 40% 50% 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: auroraMove 8s ease-in-out infinite alternate;
+}
+
+.aurora2 {
+  position: absolute;
+  width: 16vw;
+  height: 5vw;
+  left: 68vw;
+  top: 25vh;
+  background: linear-gradient(100deg, #b388ff 0%, #5af3ff 80%);
+  opacity: 0.22;
+  filter: blur(80px);
+  border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: auroraMove2 10s ease-in-out infinite alternate;
+}
+
+.aurora3 {
+  position: absolute;
+  width: 14vw;
+  height: 4vw;
+  left: 75vw;
+  top: 40vh;
+  background: linear-gradient(120deg, #ffe066 0%, #7fffd4 100%);
+  opacity: 0.18;
+  filter: blur(60px);
+  border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: auroraMove3 12s ease-in-out infinite alternate;
+}
+
+.auroraGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.auroraGlow1 {
+  width: 40vw;
+  height: 40vw;
+  left: 45vw;
+  top: 0vh;
+  background: radial-gradient(circle, #3fa7ff 0%, #1a1233 80%);
+}
+
+.auroraGlow2 {
+  width: 30vw;
+  height: 30vw;
+  left: 10vw;
+  top: 40vh;
+  background: radial-gradient(circle, #5af3ff 0%, #1a1233 80%);
+}
+
+@keyframes auroraMove {
+  0% { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(-30px) scaleX(1.1); }
+}
+@keyframes auroraMove2 {
+  0% { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(40px) scaleX(0.95); }
+}
+@keyframes auroraMove3 {
+  0% { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(-20px) scaleX(1.05); }
+} 

@@ -1,0 +1,144 @@
+.section {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-side-padding-mobile);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  height: 100%;
+  gap: 20px;
+}
+
+.hero__row1,
+.hero__row2,
+.hero__row3 {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__row1 {
+  align-items: flex-end;
+  
+}
+
+.hero__row2 {
+  align-items: center;
+}
+
+.hero__row3 {
+  align-items: flex-start;
+}
+
+
+.hero__title__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.hero__scope {
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ff6ec4 0%, #f7971e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.hero__description {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.1rem;
+  max-width: 600px;
+  letter-spacing: 0.3px; 
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero__button {
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0.8;
+  padding: 14px 40px;
+  width: 300px;
+  color: #fff;
+}
+
+.primary {
+  background: linear-gradient(90deg, #ff6ec4 0%, #f7971e 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(255, 110, 196, 0.2);
+
+}
+
+.primary:hover {
+  background: linear-gradient(90deg, #f7971e 0%, #ff6ec4 100%);
+}
+
+.secondary {
+  padding: 0.75rem 1.5rem;  /* py-3 px-6 */
+  border: 1px solid #f472b6;  /* border border-pink-400 */
+  border-radius: 0.5rem;  /* rounded-lg */
+  font-weight: 500;  /* font-medium */
+  text-align: center;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  
+  /* removed incomplete color property */
+}
+
+
+.secondary:hover {
+  background: rgba(255, 110, 196, 0.08);
+  color: #fff;
+  border-color: transparent;
+}
+
+.secondary:hover .btn-content {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background: none;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.large {
+  font-size: 1.1rem;
+  padding: 14px 40px;
+}
+
+.small {
+  font-size: 0.9rem;
+  padding: 8px 20px;
+}

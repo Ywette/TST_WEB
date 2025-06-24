@@ -1,0 +1,44 @@
+[
+    {
+      "key": "item1",
+      "name": "LuxGovSat SA",
+      "logo": "https://govsat.lu/wp-content/themes/govsat/dist/images/logo.svg",
+      "url": "https://govsat.lu/",
+      "bgColor": "#1a365d"
+    },
+    {
+      "key": "item2",
+      "name": "Ministry of Foreign and European Affairs",
+      "logo": "https://cdn.public.lu/pictures/logos/gov/fr/gov-light.png",
+      "url": "https://mae.gouvernement.lu/en.html",
+      "bgColor": "#ffffff"
+    },
+    {
+      "key": "item3",
+      "name": "SES Techcom",
+      "logo": "https://ses-techcom.com/wp-content/themes/oxo-theme/dist/img/logo.svg",
+      "url": "https://ses-techcom.com",
+      "bgColor": "#f8fafc"
+    },
+    {
+      "key": "item4",
+      "name": "TST Fahrzeugbau",
+      "logo": "https://tst-fahrzeugbau.com/wp-content/uploads/2019/11/logo-208x74.png",
+      "url": "https://tstgroup.de",
+      "bgColor": "#ffffff"
+    },
+    {
+      "key": "item5",
+      "name": "IP Copter",
+      "logo": "https://tstgroup.de/images/ipcopter.gif",
+      "url": "https://www.ipcopter.com/de/",
+      "bgColor": "#f8fafc"
+    },
+    {
+      "key": "item7",
+      "name": "Temeka",
+      "logo": "https://atte.area.lv/tst/wp-content/uploads/2022/02/temeka-logo-150x170-1.png",
+      "url": "https://www.temeka.de/",
+      "bgColor": "#f8fafc"
+    }
+  ]

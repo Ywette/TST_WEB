@@ -1,0 +1,128 @@
+.section {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-body);
+  padding-top: 25%;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  height: 100%;
+  gap: 20px;
+  
+  
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.gradientText {
+  background: var(--section-title);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: 1.125rem;
+  /* text-align: center; */
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  color: #f0f0f0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  filter: brightness(1.2);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.cardText {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.ctaContainer {
+  text-align: center;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(90deg, rgba(234, 255, 143, 0.7) 0%, rgba(63, 167, 255, 0.7) 100%);
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

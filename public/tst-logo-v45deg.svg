@@ -1,0 +1,88 @@
+<svg viewBox="50 50 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="limeGlow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood floodColor="lime" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="brightLimeGlow">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feFlood floodColor="#c1ff72" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="fadeMask">
+      <rect x="50" y="50" width="100" height="100" fill="white" />
+      <rect x="50" y="50" width="100" height="100">
+        <animate attributeName="y" values="150;50" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </mask>
+    <mask id="fadeMaskFast">
+      <rect x="50" y="50" width="100" height="100" fill="white" />
+      <rect x="50" y="50" width="100" height="100">
+        <animate attributeName="y" values="150;50" dur="2s" repeatCount="indefinite" />
+      </rect>
+    </mask>
+  </defs>
+  
+  {/* Rotating Group */}
+  <g transform="rotate(45 100 100)">
+    {/* Ground Network with Dish - Updated to connect both ends */}
+    <circle cx="100" cy="100" r="4" fill="rgba(0, 100, 0, 0.6)" />
+    
+    {/* Complete dish structure with connected ends */}
+    <path d="M60 100 L100 100 L140 100" stroke="lime" stroke-width="1" />
+    <path d="M60 100 C 100 130, 140 100, 140 100" fill="rgba(0, 100, 0, 0.2)" stroke="lime" stroke-width="1" />
+    
+    <circle cx="60" cy="100" r="3" fill="rgba(0, 100, 0, 0.6)" />
+    <circle cx="140" cy="100" r="3" fill="rgba(0, 100, 0, 0.6)" />
+    
+    {/* Main waves with cone shape - previously blue */}
+    <g mask="url(#fadeMask)">
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 120 70, 100 60 Q 140 50, 100 40" 
+        fill="none" 
+        stroke="lime" 
+        stroke-width="1"
+        filter="url(#limeGlow)">
+        <animate attributeName="y" values="0;-60" dur="3s" repeatCount="indefinite" />
+      </path>
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 80 70, 100 60 Q 60 50, 100 40" 
+        fill="none" 
+        stroke="lime" 
+        stroke-width="1"
+        filter="url(#limeGlow)">
+        <animate attributeName="y" values="0;-60" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </path>
+    </g>
+    
+    {/* Secondary waves with cone shape - previously pink */}
+    <g mask="url(#fadeMaskFast)">
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 110 70, 100 60 Q 120 50, 100 40" 
+        fill="none" 
+        stroke="#c1ff72" 
+        stroke-width="1"
+        filter="url(#brightLimeGlow)">
+        <animate attributeName="y" values="0;-60" dur="2s" repeatCount="indefinite" begin="0.3s" />
+      </path>
+      <path 
+        d="M100 100 Q 100 90, 100 80 Q 90 70, 100 60 Q 80 50, 100 40" 
+        fill="none" 
+        stroke="#c1ff72" 
+        stroke-width="1"
+        filter="url(#brightLimeGlow)">
+        <animate attributeName="y" values="0;-60" dur="2s" repeatCount="indefinite" begin="0.8s" />
+      </path>
+    </g>
+  </g>
+</svg>
