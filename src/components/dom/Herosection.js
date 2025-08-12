@@ -66,7 +66,7 @@ export default function HeroSection() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
                     >
-                        Whether you're looking to enhance your service management, install or refurbish antennas, or optimize your RF equipment, we've got you covered.
+                        Whether you&apos;re looking to enhance your service management, install or refurbish antennas, or optimize your RF equipment, we&apos;ve got you covered.
                         </motion.p><motion.p>At TST LUXKOM, we specialize in delivering seamless, reliable, and high-performance satellite communication solutions.
                         </motion.p>
                     

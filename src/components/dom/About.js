@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../styles/About.module.css';
+import Link from 'next/link';
 
 const aboutData = [
   {
@@ -40,13 +41,13 @@ export default function About() {
         >
           TST LUXKOM
         </h2>
-        
+
         <p className={styles.description}>
-          European consulting firm based in Luxembourg since 2012, with origins dating back to 1998 in Germany. 
-          Our mission is to deliver innovative, reliable telecommunications and IT solutions that empower your 
-          business to thrive in today's digital landscape with mission, vision and values:
+          European consulting firm based in Luxembourg since 2012, with origins dating back to 1998 in Germany.
+          Our mission is to deliver innovative, reliable telecommunications and IT solutions that empower your
+          business to thrive in today&apos; digital landscape with mission, vision and values:
         </p>
-        
+
         <div className={styles.grid}>
           {aboutData.map(({ title, text, icon, alt }, idx) => (
             <article
@@ -63,18 +64,18 @@ export default function About() {
             </article>
           ))}
         </div>
-        
-        <div 
+
+        <div
           className={styles.ctaContainer}
-          data-aos="fade-up" 
+          data-aos="fade-up"
           data-aos-delay="500"
         >
-          <a 
-            href="#partners" 
+          <Link
+            href="#partners"
             className={styles.cta}
           >
             Trusted by leaders in global SATCOM
-          </a>
+          </Link>
         </div>
       </div>
     </section>

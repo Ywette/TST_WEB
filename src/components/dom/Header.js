@@ -32,7 +32,7 @@ export default function Header() {
                     <div className={styles.headerInner}>
                         {/* Logo section */}
                         <div className={styles.logoContainer}>
-                            <a href="/" className={styles.logoLink} aria-label="TST LUXKOM Home">
+                            <Link href="/" className={styles.logoLink} aria-label="TST LUXKOM Home">
                                 <div className={styles.logoImageWrapper}>
                                     <Image
                                         src={`${basePath}/tst-logo-v45deg.svg`}
@@ -43,7 +43,7 @@ export default function Header() {
                                     />
                                 </div>
                                 <span className={styles.logoText}>TST LUXKOM</span>
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Navigation section */}
@@ -51,13 +51,13 @@ export default function Header() {
                             <ul className={styles.navList}>
                                 {nav_items.map((item) => (
                                     <li className={styles.navItem} key={item.id}>
-                                        <a
+                                        <Link
                                             href={`#${item.navItem}`}
                                             onClick={(e) => handleNavClick(e, item.navItem)}
                                             className={styles.navLink}
                                         >
                                             {item.navItem}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
