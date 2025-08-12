@@ -314,7 +314,7 @@ const ContactSection = () => {
               {submitStatus === 'success' && (
                 <div style={{ padding: '1rem', border: '1px solid #bbf7d0', borderRadius: '0.5rem', fontSize: '0.875rem', backgroundColor: '#f0fdf4', color: '#166534' }}>
                   <p style={{ margin: 0 }}>
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
                   </p>
                 </div>
               )}
