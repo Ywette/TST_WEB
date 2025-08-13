@@ -21,10 +21,10 @@ export default function Home() {
           <SatelliteScene />
         </Canvas> */}
         <HeroSection />
-        <Services />
-        <About />        
-        <Partners />
-        <ContactSection  />
+        {/* <Services /> */}
+        {/* <About />         */}
+        {/* <Partners /> */}
+        {/* <ContactSection  /> */}
       </div>
       
       

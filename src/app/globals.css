@@ -64,15 +64,15 @@ button {
 }
 
 @media (max-width: 500px) {
-  .section {
+  /* .section {
     padding: 0 var(--section-side-padding-mobile);
-  }
+  } */
 }
 
 @media (min-width: 501px) {
-  .section {
+  /* .section {
     padding: 0 var(--section-side-padding-desktop);
-  }
+  } */
 }
 
 /* Remove the h1, h2 styles from here since we'll use CSS modules */
