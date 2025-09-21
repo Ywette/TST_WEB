@@ -20,8 +20,8 @@ export default function Home() {
         {/* <Canvas>
           <SatelliteScene />
         </Canvas> */}
-        <HeroSection />
-        {/* <Services /> */}
+        {/* <HeroSection /> */}
+        <Services />
         {/* <About />         */}
         {/* <Partners /> */}
         {/* <ContactSection  /> */}

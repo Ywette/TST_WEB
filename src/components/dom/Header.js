@@ -59,7 +59,7 @@ export default function Header() {
                                             {item.navItem}
                                         </Link>
                                     </li>
-                                ))}
+                                ))}                                
                             </ul>
 
                         </nav>

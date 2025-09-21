@@ -34,13 +34,13 @@ export default function About() {
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
-        <h2
+        {/* <h2
           className={`${styles.title} ${styles.gradientText}`}
           data-aos="fade-up"
           data-aos-delay="100"
         >
           TST LUXKOM
-        </h2>
+        </h2> */}
 
         <p className={styles.description}>
           European consulting firm based in Luxembourg since 2012, with origins dating back to 1998 in Germany.
