@@ -1,25 +1,126 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <circle cx="50" cy="50" r="45" fill="rgba(0, 0, 0, 0.15)" opacity="0.5" />
+  <style>
+    .draw-animation {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 2s ease-in-out forwards;
+    }
+    
+    .draw-delay-1 {
+      animation-delay: 0.3s;
+    }
+    
+    .draw-delay-2 {
+      animation-delay: 0.6s;
+    }
+    
+    .draw-delay-3 {
+      animation-delay: 0.9s;
+    }
+    
+    .draw-delay-4 {
+      animation-delay: 1.2s;
+    }
+    
+    .draw-delay-5 {
+      animation-delay: 1.5s;
+    }
+    
+    .draw-delay-6 {
+      animation-delay: 1.8s;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-in forwards;
+    }
+    
+    .fade-delay-1 {
+      animation-delay: 2.1s;
+    }
+    
+    .fade-delay-2 {
+      animation-delay: 2.4s;
+    }
+    
+    .flame-flicker {
+      animation: flicker 0.4s infinite alternate;
+      animation-delay: 2.7s;
+      transform-origin: 50px 70px;
+    }
+    
+    .rocket-hover {
+      animation: hover 3s ease-in-out infinite;
+      animation-delay: 3s;
+      transform-origin: 50px 50px;
+    }
+    
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes flicker {
+      0% { 
+        opacity: 0.6; 
+        transform: scale(0.9) translateY(2px);
+      }
+      100% { 
+        opacity: 1; 
+        transform: scale(1.1) translateY(-1px);
+      }
+    }
+    
+    @keyframes hover {
+      0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+      }
+      33% { 
+        transform: translateY(-3px) rotate(1deg);
+      }
+      66% { 
+        transform: translateY(2px) rotate(-0.5deg);
+      }
+    }
+  </style>
   
-  <!-- Rocket body -->
-  <path d="M50,10 C40,10 35,25 35,45 L35,70 L45,60 L50,70 L55,60 L65,70 L65,45 C65,25 60,10 50,10 Z" fill="none" stroke="lime" stroke-width="1" />
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="rgba(0, 0, 0, 0.15)" opacity="0.5" class="draw-animation" stroke="rgba(0, 0, 0, 0.3)" stroke-width="0.5" />
+     
+  <!-- Rocket body with hover animation -->
+  <g class="rocket-hover">
+    <path d="M50,10 C40,10 35,25 35,45 L35,70 L45,60 L50,70 L55,60 L65,70 L65,45 C65,25 60,10 50,10 Z" 
+          fill="none" stroke="lime" stroke-width="2" class="draw-animation draw-delay-1" />
+       
+    <!-- Window -->
+    <circle cx="50" cy="35" r="5" fill="none" stroke="lime" stroke-width="1.5" class="draw-animation draw-delay-2" />
+       
+    <!-- Inner details - top line -->
+    <line x1="42" y1="20" x2="58" y2="20" stroke="lime" stroke-width="1" opacity="0.7" class="draw-animation draw-delay-5" />
+    
+    <!-- Inner details - bottom line -->
+    <line x1="42" y1="25" x2="58" y2="25" stroke="lime" stroke-width="1" opacity="0.7" class="draw-animation draw-delay-6" />
+  </g>
+     
+  <!-- Left fin -->
+  <path d="M35,60 L25,75 L35,70" fill="none" stroke="lime" stroke-width="1.5" class="draw-animation draw-delay-3" />
   
-  <!-- Window -->
-  <circle cx="50" cy="35" r="5" fill="none" stroke="lime" stroke-width="1" />
-  
-  <!-- Fins -->
-  <path d="M35,60 L25,75 L35,70" fill="none" stroke="lime" stroke-width="1" />
-  <path d="M65,60 L75,75 L65,70" fill="none" stroke="lime" stroke-width="1" />
-  
-  <!-- Flame -->
-  <path d="M45,70 C45,80 50,85 50,90 C50,85 55,80 55,70" fill="none" stroke="lime" stroke-width="1" />
-  
-  <!-- Inner details -->
-  <line x1="42" y1="20" x2="58" y2="20" stroke="lime" stroke-width="1" opacity="0.7" />
-  <line x1="42" y1="25" x2="58" y2="25" stroke="lime" stroke-width="1" opacity="0.7" />
-  
-  <!-- Glass effect overlay -->
-  <circle cx="50" cy="35" r="3" fill="rgba(255, 255, 255, 0.05)" />
-  <ellipse cx="40" cy="40" rx="30" ry="25" fill="rgba(255, 255, 255, 0.05)" opacity="0.2" transform="rotate(-10 50 50)" />
+  <!-- Right fin -->
+  <path d="M65,60 L75,75 L65,70" fill="none" stroke="lime" stroke-width="1.5" class="draw-animation draw-delay-3" />
+     
+  <!-- Flame with enhanced flicker effect -->
+  <path d="M45,70 C45,80 50,85 50,90 C50,85 55,80 55,70" 
+        fill="none" stroke="lime" stroke-width="2" class="draw-animation draw-delay-4 flame-flicker" />
+     
+  <!-- Glass effect overlays (fade in) -->
+  <circle cx="50" cy="35" r="3" fill="rgba(255, 255, 255, 0.1)" class="fade-in fade-delay-1" />
+  <ellipse cx="45" cy="40" rx="25" ry="20" fill="rgba(255, 255, 255, 0.05)" opacity="0.3" 
+           transform="rotate(-10 50 50)" class="fade-in fade-delay-2" />
 </svg>

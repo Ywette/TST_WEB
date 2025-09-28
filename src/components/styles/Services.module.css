@@ -1,7 +1,7 @@
 .section {
     /* min-height: calc(100vh - 60px); added to global css*/
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
@@ -23,45 +23,47 @@
     color: transparent;
 }
 
-.service_icon_wrapper {
+/* .service_icon_wrapper {
     width: 50px;
-}
+} */
 
 .service_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: flex-start; */
     padding: 40px 28px 32px 28px;
-    width: 100%;
-    min-width: 0;
+    /* width: 100%; */
+    /* min-width: 0; */
     margin: 24px 0;
-    background: linear-gradient(135deg, #ff6ec4 0%, #f7971e 100%);
-    border-radius: 28px;
+    /* background: linear-gradient(135deg, #ff6ec4 0%, #f7971e 100%); */
+    border-radius: 12px;
     box-shadow: 0 8px 32px 0 rgba(251, 117, 7, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
-    border: none;
+    border: 1px solid #f7971e;
     position: relative;
-    overflow: visible;
+    /* overflow: visible; */
 }
 
-.service_card::before {
-    display: none;
-}
 
+.service_card_content_left{
+    width: 100%;
+    border: red;
+}
 .service_card_icon_circle {
-    width: 64px;
-    height: 64px;
+    /* width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: linear-gradient(135deg, #ff6ec4 0%, #f7971e 100%);
+    opacity: 0.6;
     box-shadow: 0 4px 16px 0 rgba(251, 117, 7, 0.18);
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    justify-content: center; */
+    /* position: absolute; */
+    /* top: -32px;
+    left: 50%; */
+    /* transform: translateX(-50%); */
+    /* z-index: 2; */
 }
 
 .service_card_icon_title {
@@ -94,9 +96,14 @@
 
 .service_card_content {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;    
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
     align-items: center;
+}
+
+.service_card_content_right{
+
 }
 
 .service_description {
@@ -147,4 +154,12 @@
     grid-template-columns: 1fr;
     gap: 20px;
     padding-left: 0;
+    
+}
+
+@media (max-width: 780px) {
+.stacked_services {
+    grid-template-columns: 1fr;   
+}
+
 }

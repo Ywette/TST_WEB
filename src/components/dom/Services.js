@@ -57,31 +57,38 @@ const ServiceCard = React.forwardRef(({ service, setHoveredCard }, ref) => {
       onMouseEnter={() => setHoveredCard && setHoveredCard(service.id)}
       onMouseLeave={() => setHoveredCard && setHoveredCard(null)}
     >
-      {/* Floating Icon Circle */}
+      <div className={styles.service_card_content}>
+
+        <div className={styles.service_card_content_left}>
+          {/* Floating Icon Circle */}
       <div className={styles.service_card_icon_circle}>
         {getIconForService(service.id)}
       </div>
-
-      <div className={styles.service_card_content}>
-        <div className={styles.service_card_icon_title}>
-          <h3 className={styles.service_title}>{service.title}</h3>
         </div>
 
-        <div className={styles.service_description}>
-          <p className={styles.service_description}>{service.description}</p>
+        <div className={styles.service_card_content_right}>
+          <div className={styles.service_card_icon_title}>
+            <h3 className={styles.service_title}>{service.title}</h3>
+          </div>
 
-          {service.features && (
-            <ul className={styles.service_features}>
-              {service.features.map((feature, idx) => (
-                <li key={idx} className={styles.service_feature}>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <div className={styles.service_description}>
+            <p className={styles.service_description}>{service.description}</p>
+
+            {service.features && (
+              <ul className={styles.service_features}>
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className={styles.service_feature}>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
 
-        <button className={styles.service_card_button}>Order Now</button>
+
+
+        {/* <button className={styles.service_card_button}>Order Now</button> */}
       </div>
     </div>
   );

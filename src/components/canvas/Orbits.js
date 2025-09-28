@@ -79,15 +79,10 @@ export default function Orbits() {
 
   // Get viewport width
   const { size, camera } = useThree();
-  // Calculate visible width at z=0
+  // Calculate visible width at z=0 (for icon size only)
   const vFOV = (camera.fov * Math.PI) / 180; // vertical fov in radians
   const visibleHeight = 2 * Math.tan(vFOV / 2) * Math.abs(camera.position.z);
-  const aspect = size.width / size.height;
-  const visibleWidth = visibleHeight * aspect;
-  
-  // Position orbits so vertical diagonal aligns with right edge
-  const groupX = visibleWidth / 2; // Align with right edge
-  const groupY = 0; // Center vertically
+  // Center orbits in the middle of the canvas
 
   // Convert 30px to world units
   const iconSize = (30 / size.height) * visibleHeight;
@@ -152,7 +147,7 @@ export default function Orbits() {
   }
 
   return (
-    <group position={[groupX, groupY, 0]}>
+    <group position={[0, 0, 0]}>
       {/* Lighting for 3D effect */}
       <ambientLight intensity={0.5} />
       <directionalLight position={[20, 20, 20]} intensity={1.2} castShadow />

@@ -11,23 +11,16 @@ import StarBackgroundContainer from '../components/canvas/StarBackgroundContaine
 import ContactSection from '../components/dom/ContactSection';
 
 export default function Home() {
-  
   return (
     <div className={styles.page}>
-      <StarBackgroundContainer />
-      {/* Hero section with 3D Canvas */}
-      
-        {/* <Canvas>
-          <SatelliteScene />
-        </Canvas> */}
-        {/* <HeroSection /> */}
+      {/* <StarBackgroundContainer /> */}
+      <div>
+        <HeroSection />
         <Services />
-        {/* <About />         */}
+         <About />        
         {/* <Partners /> */}
         {/* <ContactSection  /> */}
       </div>
-      
-      
-  
+    </div>
   );
 }
